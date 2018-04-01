@@ -108,8 +108,5 @@
         <module>api</module>
         <module>consumer</module>
         <module>provider</module>
-        <module>api</module>
-        <module>consumer</module>
-        <module>provider</module>
     </modules>
 </project>
