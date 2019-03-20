@@ -1,6 +1,9 @@
 package com.test;
 
+import org.junit.runner.RunWith;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.IOException;
 
@@ -9,10 +12,12 @@ import java.io.IOException;
  * @Description:
  * @Date: 2018/4/1
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:springmvc.xml"})
 public class Test {
-    public static void main(String[] args) throws Exception {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:springmvc.xml");
-        context.start();
+
+    @org.junit.Test
+    public void testProvider(){
 
         System.out.println("Dubbo provider start...");
 
