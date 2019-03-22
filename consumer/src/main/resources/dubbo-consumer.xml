@@ -10,6 +10,11 @@
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
     <dubbo:registry  protocol="zookeeper" address="zookeeper://aliyun:2181"/>
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="demoService" interface="com.pier.api.DemoService" />
-    <dubbo:reference id="helloService" interface="com.pier.api.HelloService" />
+    <dubbo:reference id="demoService" interface="com.pier.service.DemoService" generic="true"/>
+    <dubbo:reference id="helloService" interface="com.pier.service.HelloService" />
+    <dubbo:reference id="asyncService" timeout="10000" interface="com.pier.service.async.AsyncService" async="true"/>
+    <dubbo:reference id="callbackService" interface="com.pier.service.callback.CallbackService" />
+    <dubbo:reference id="notifyService" interface="com.pier.service.INotifyService" version="1.0.0" group="cn" >
+        <dubbo:method name="get" async="true" onreturn = "notify.onreturn" onthrow="notify.onthrow" />
+    </dubbo:reference>
 </beans>

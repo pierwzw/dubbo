@@ -12,9 +12,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api" target="1.5" />
-      <module name="consumer" target="1.5" />
+      <module name="consumer" target="8" />
       <module name="dubbo-demo" target="1.5" />
-      <module name="provider" target="1.5" />
+      <module name="provider" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

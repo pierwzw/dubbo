@@ -13,7 +13,7 @@ import java.io.IOException;
  * @Date: 2018/4/1
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:springmvc.xml"})
+@ContextConfiguration(locations = {"classpath:spring-mvc.xml"})
 public class Test {
 
     @org.junit.Test

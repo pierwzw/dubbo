@@ -1,6 +1,6 @@
-package com.pier.provider;
+package com.pier.service.impl;
 
-import com.pier.api.DemoService;
+import com.pier.service.DemoService;
 import org.springframework.stereotype.Service;
 
 /**
